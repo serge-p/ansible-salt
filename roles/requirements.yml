@@ -1,0 +1,6 @@
+  name: ansible-pip
+
+  name: ansible-virtualenv
+
+  name: ansible-deploy-salt
+  

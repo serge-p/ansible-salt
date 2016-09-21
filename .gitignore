@@ -1,0 +1,7 @@
+playbook*.retry
+ansible.cfg
+hosts
+roles/*
+ssl
+!roles/requirements.yml
+!roles/README.MD

@@ -1,0 +1,18 @@
+---
+- name: Deploy SaltStack using PIP into Virtualenv
+  hosts: localhost
+  become: yes
+  become_method: sudo
+  vars:
+    salt_master: salt-master.example.com
+    proxy_env:
+      http_proxy: http://http-proxy.example.com:8080
+      https_proxy: http://https-proxy.example.com:8081
+    pip_dir_source: /usr/local/virtualenv
+    pip_version: 8.1.2
+    virtualenv_version: 15.0.3
+    virtualenv_dir: /usr/local/virtualenv/salt
+  roles:
+    - ansible-pip
+    - ansible-virtualenv
+    - ansible-deploy-salt
